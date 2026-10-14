@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy / Política de Privacidad — DIGI Router</title>
+  <meta name="description" content="Privacy Policy for DIGI Router Android App (es.digirouter.app). Comprehensive information on data privacy, local network access, and security under GDPR.">
+  <style>
+    :root {
+      --primary: #1565C0;
+      --primary-dark: #0D47A1;
+      --primary-light: #E3F2FD;
+      --accent: #00897B;
+      --text: #1E293B;
+      --text-muted: #64748B;
+      --bg: #F8FAFC;
+      --card-bg: #FFFFFF;
+      --border: #E2E8F0;
+      --radius: 12px;
+      --shadow: 0 4px 6px -1px rgba(0,0,0,0.06), 0 2px 4px -2px rgba(0,0,0,0.04);
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #F1F5F9;
+        --text-muted: #94A3B8;
+        --bg: #0B1120;
+        --card-bg: #151E32;
+        --border: #1E293B;
+        --primary-light: #1E2E4A;
+        --shadow: 0 4px 10px rgba(0,0,0,0.3);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+      padding-bottom: 80px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #FFFFFF;
+      padding: 48px 24px 36px;
+      box-shadow: 0 4px 20px rgba(21, 101, 192, 0.25);
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.825rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      align-self: flex-start;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .header-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      opacity: 0.9;
+      margin-top: 6px;
+    }
+
+    /* Language Switcher Button */
+    .lang-switcher {
+      display: inline-flex;
+      background: rgba(0, 0, 0, 0.25);
+      border-radius: 999px;
+      padding: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.15);
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: #FFFFFF;
+      color: var(--primary-dark);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .meta-bar {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.875rem;
+      opacity: 0.85;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .meta-bar span strong {
+      font-weight: 600;
+    }
+
+    /* Main Content */
+    main {
+      margin-top: 32px;
+    }
+
+    .lang-panel {
+      display: none;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .lang-panel.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .disclaimer-card {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: var(--radius);
+      margin-bottom: 28px;
+      font-size: 0.925rem;
+    }
+
+    .disclaimer-card strong {
+      color: var(--primary);
+    }
+
+    .highlight-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .highlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .highlight-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .highlight-item h4 {
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .highlight-item p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .section-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 18px 0 8px;
+      color: var(--text);
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    ul, ol {
+      margin: 10px 0 16px 24px;
+      color: var(--text);
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 20px;
+      font-size: 0.9rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    th {
+      background: var(--bg);
+      font-weight: 600;
+    }
+
+    code {
+      font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.85em;
+      background: var(--bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    .contact-box {
+      background: var(--primary-light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-top: 16px;
+    }
+
+    .contact-box a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    @media print {
+      body { background: #fff; color: #000; }
+      header { background: #fff; color: #000; box-shadow: none; border-bottom: 2px solid #000; }
+      .lang-switcher { display: none; }
+      .lang-panel { display: block !important; margin-bottom: 40px; }
+      .section-card, .highlight-card { box-shadow: none; border: 1px solid #ccc; page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="header-badge">
+          🛡️ Privacy Policy / Política de Privacidad
+        </div>
+
+        <div class="header-title-row">
+          <div>
+            <h1>DIGI Router</h1>
+            <p class="subtitle" id="headerSubtitle">Local Network Management &amp; Diagnostics for Android</p>
+          </div>
+
+          <div class="lang-switcher" role="group" aria-label="Language selection">
+            <button class="lang-btn active" id="btnEn" onclick="switchLanguage('en')">English</button>
+            <button class="lang-btn" id="btnEs" onclick="switchLanguage('es')">Español</button>
+          </div>
+        </div>
+
+        <div class="meta-bar">
+          <span><strong>Application ID:</strong> <code>es.digirouter.app</code></span>
+          <span><strong>Developer:</strong> Gabriel Muñoz</span>
+          <span><strong>Last Updated:</strong> October 2026</span>
+          <span><strong>Effective Date:</strong> October 14, 2026</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+
+      <!-- ============================================================== -->
+      <!-- ENGLISH VERSION                                                -->
+      <!-- ============================================================== -->
+      <article id="panelEn" class="lang-panel active" lang="en">
+
+        <div class="disclaimer-card">
+          <strong>Notice &amp; Trademark Disclaimer:</strong> <em>DIGI Router</em> is an independent, third-party companion application developed by Gabriel Muñoz. It is <strong>not</strong> an official application of, nor is it endorsed by, affiliated with, or sponsored by DIGI Spain Telecom, S.L.U. or RCS &amp; RDS S.A. All product and company names, logos, and trademarks remain the property of their respective holders.
+        </div>
+
+        <div class="highlight-card">
+          <h2>Summary: Privacy by Design</h2>
+          <p>
+            Your privacy is our core engineering principle. <em>DIGI Router</em> was deliberately built as a <strong>local-first</strong> utility. We do not track you, we do not operate telemetry servers, and your router credentials never leave your home network.
+          </p>
+          <div class="highlight-grid">
+            <div class="highlight-item">
+              <h4>🔒 Local-Only Operation</h4>
+              <p>Communicates directly between your Android device and your router over your local Wi-Fi. No intermediary cloud servers exist.</p>
+            </div>
+            <div class="highlight-item">
+              <h4>🚫 Zero Tracking &amp; Ads</h4>
+              <p>No Google Analytics, no Firebase Crashlytics, no advertising frameworks, and no behavioral tracking libraries whatsoever.</p>
+            </div>
+            <div class="highlight-item">
+              <h4>🔑 Hardware-Encrypted Storage</h4>
+              <p>If you choose to remember your password, it is stored encrypted with AES-256-GCM via the Android Keystore.</p>
+            </div>
+            <div class="highlight-item">
+              <h4>📦 No Cloud Backups</h4>
+              <p>Android auto-cloud backup is explicitly disabled in the app manifest, preventing any credentials from syncing to cloud drives.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>1. Data We Process and How It Is Handled</h2>
+          <p>
+            The application processes only the technical data strictly necessary to communicate with your router and perform on-device network diagnostics:
+          </p>
+
+          <h3>A. Router Credentials</h3>
+          <ul>
+            <li><strong>Data processed:</strong> Router IP address (e.g., <code>192.168.1.1</code>), username, and administrative password.</li>
+            <li><strong>Purpose:</strong> Authenticating directly with the router's local web administration service to read status and apply user commands.</li>
+            <li><strong>Storage &amp; Security:</strong> If you check "Remember password", the password is saved solely inside private application storage via Android's <code>EncryptedSharedPreferences</code> backed by the hardware-protected Android Keystore (AES-256-GCM and AES-256-SIV). It is <strong>never</strong> transmitted over the Internet or shared with any third party.</li>
+            <li><strong>Retention:</strong> Stored locally until you sign out, disable "Remember password", clear app data, or uninstall the app.</li>
+          </ul>
+
+          <h3>B. Local Network Topology &amp; Connected Devices</h3>
+          <ul>
+            <li><strong>Data processed:</strong> Connected device hostnames, MAC addresses, local IP addresses, signal strength, link speed, and connection interfaces (Ethernet / Wi-Fi band).</li>
+            <li><strong>Purpose:</strong> Displaying your home network map, EasyMesh node hierarchy, Wi-Fi 7 / MLO details, and signal diagnostics.</li>
+            <li><strong>Local Discovery:</strong> The app performs local multicast discovery (mDNS on UDP port 5353, SSDP on UDP port 1900, and HTTP device description queries) strictly on your local subnet to resolve friendly vendor/model names.</li>
+            <li><strong>Storage:</strong> User-customized labels (e.g., "Living Room TV") are saved locally in private <code>SharedPreferences</code> on your phone. None of this data is uploaded anywhere.</li>
+          </ul>
+
+          <h3>C. Fiber Optics &amp; Hardware Telemetry</h3>
+          <ul>
+            <li><strong>Data processed:</strong> GPON/XGS-PON optical attenuation (Rx/Tx dBm power), transceiver voltage, laser bias current, and temperature read directly from router hardware OIDs.</li>
+            <li><strong>Purpose:</strong> Providing physical fiber health checks and helping you detect dirty optical connectors or link degradation.</li>
+            <li><strong>Storage:</strong> Processed in real time in memory; not recorded or uploaded.</li>
+          </ul>
+
+          <h3>D. Wi-Fi QR Code Generation</h3>
+          <ul>
+            <li><strong>Data processed:</strong> Your Wi-Fi SSID and pre-shared key.</li>
+            <li><strong>Purpose:</strong> Generating a standard Wi-Fi QR code so family and guests can easily join your network.</li>
+            <li><strong>Storage &amp; Security:</strong> Rendered entirely on-device using local vector drawing and the open-source ZXing library. No remote generation APIs or servers are involved.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h2>2. External Network Communications</h2>
+          <p>
+            The app operates exclusively within your local area network (LAN), with the following explicit exceptions initiated only upon user request:
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Target Service</th>
+                <th>Data Exchanged</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Speed Test</strong></td>
+                <td>Cloudflare CDN (<code>speed.cloudflare.com</code>)</td>
+                <td>Standard HTTP ping, download, and upload data streams; public IP address visible in TCP handshake.</td>
+                <td>Measuring internet download throughput, upload throughput, latency, and jitter. Governed by <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare's Privacy Policy</a>.</td>
+              </tr>
+              <tr>
+                <td><strong>Dual Diagnostic</strong></td>
+                <td>Public DNS Resolver (<code>1.1.1.1</code>)</td>
+                <td>ICMP ping / TCP latency packets</td>
+                <td>Benchmarking total mobile-to-internet latency against router-to-internet latency to isolate Wi-Fi bottlenecks from fiber carrier issues.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            <strong>No other external connections are ever established.</strong> The app does not ping developer servers, check license servers, or send crash telemetry.
+          </p>
+        </div>
+
+        <div class="section-card">
+          <h2>3. Android Permissions and Why They Are Required</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Permission</th>
+                <th>Android Manifest Identifier</th>
+                <th>Specific Technical Need</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Network Access</strong></td>
+                <td><code>android.permission.INTERNET</code></td>
+                <td>Enables direct TCP/HTTP communication with the router's local IP address and running bandwidth/latency benchmarks.</td>
+              </tr>
+              <tr>
+                <td><strong>Network State</strong></td>
+                <td><code>android.permission.ACCESS_NETWORK_STATE</code></td>
+                <td>Allows verifying active Wi-Fi connectivity before attempting connection to the local router IP.</td>
+              </tr>
+              <tr>
+                <td><strong>Multicast Wi-Fi</strong></td>
+                <td><code>android.permission.CHANGE_WIFI_MULTICAST_STATE</code></td>
+                <td>Required by the Android system to send and receive multicast UDP packets (mDNS and SSDP) for discovering local network device models (printers, smart TVs, IoT).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-card">
+          <h2>4. Legal Grounds &amp; GDPR Compliance (EU Users)</h2>
+          <p>
+            For users residing in the European Union (EU) and the European Economic Area (EEA), data processing complies with the <strong>General Data Protection Regulation (GDPR, Regulation (EU) 2016/679)</strong>:
+          </p>
+          <ul>
+            <li><strong>Legal Basis:</strong> Processing of router credentials and local configuration is performed on the basis of <em>Contract Performance / User Request (Article 6(1)(b) GDPR)</em> to provide requested network management functionality. Local discovery and diagnostics are executed under <em>Legitimate Interest (Article 6(1)(f) GDPR)</em> to identify devices and diagnose link quality.</li>
+            <li><strong>Data Controller:</strong> Gabriel Muñoz (Independent Developer). Contact: <a href="mailto:gabriel@munozrodriguez.me">gabriel@munozrodriguez.me</a>.</li>
+            <li><strong>Your Rights:</strong> Under GDPR Articles 15–21, you have the right to access, rectify, or erase your data. Because all information is stored exclusively on your own Android device, you have immediate, autonomous control: you can erase all stored data at any moment by clicking "Sign Out" or clearing the app storage in Android Settings.</li>
+            <li><strong>Data Transfers:</strong> No personal data is transferred across international borders or to third parties by the developer.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h2>5. Third-Party Libraries &amp; Subprocessors</h2>
+          <p>
+            The app utilizes solely verified, open-source Android libraries with zero tracking capabilities:
+          </p>
+          <ul>
+            <li><strong>Android Jetpack &amp; Compose</strong> (Google LLC) — Native UI framework and lifecycle management.</li>
+            <li><strong>AndroidX Security Crypto</strong> (Google LLC) — Provides hardware-backed MasterKey encryption for local credential storage.</li>
+            <li><strong>OkHttp &amp; Okio</strong> (Square, Inc.) — High-performance HTTP client for direct local communication with router endpoints.</li>
+            <li><strong>ZXing ("Zebra Crossing")</strong> — Client-side barcode and QR code generation library. Operates 100% offline.</li>
+            <li><strong>Kotlin Coroutines &amp; Serialization</strong> (JetBrains s.r.o.) — Asynchronous execution and local JSON parsing.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h2>6. Children's Privacy</h2>
+          <p>
+            Our application is a technical networking management utility intended for home network administrators. We do not knowingly collect, solicit, or store personal information from children under the age of 13 (or under 16 in the European Union).
+          </p>
+        </div>
+
+        <div class="section-card">
+          <h2>7. Updates to This Privacy Policy</h2>
+          <p>
+            We may periodically update this Privacy Policy to reflect app enhancements or legal requirements. Any modifications will be published here with an updated "Effective Date". We encourage you to review this page periodically. Continued use of the application constitutes acceptance of any updated terms.
+          </p>
+        </div>
+
+        <div class="section-card">
+          <h2>8. Contact &amp; Developer Information</h2>
+          <p>
+            If you have questions, concerns, or requests regarding this Privacy Policy or your data privacy, please contact the developer:
+          </p>
+          <div class="contact-box">
+            <p><strong>Developer:</strong> Gabriel Muñoz</p>
+            <p><strong>Email:</strong> <a href="mailto:gabriel@munozrodriguez.me">gabriel@munozrodriguez.me</a></p>
+            <p><strong>Application:</strong> DIGI Router (<code>es.digirouter.app</code>)</p>
+            <p><strong>Location:</strong> Spain / European Union</p>
+          </div>
+        </div>
+
+      </article>
+
+      <!-- ============================================================== -->
+      <!-- SPANISH VERSION                                                -->
+      <!-- ============================================================== -->
+      <article id="panelEs" class="lang-panel" lang="es">
+
+        <div class="disclaimer-card">
+          <strong>Aviso y Descargo de Marcas:</strong> <em>Router DIGI</em> es una aplicación independiente de terceros desarrollada por Gabriel Muñoz. <strong>No</strong> es una aplicación oficial ni está respaldada, afiliada ni patrocinada por DIGI Spain Telecom, S.L.U. ni por RCS &amp; RDS S.A. Todos los nombres de productos, empresas, logotipos y marcas registradas son propiedad exclusiva de sus respectivos titulares.
+        </div>
+
+        <div class="highlight-card">
+          <h2>Resumen: Privacidad desde el Diseño</h2>
+          <p>
+            Tu privacidad es nuestro principio fundamental. <em>Router DIGI</em> ha sido diseñada deliberadamente como una herramienta <strong>100% local</strong>. No rastreamos tu actividad, no operamos servidores de telemetría y las credenciales de tu router nunca salen de tu red doméstica.
+          </p>
+          <div class="highlight-grid">
+            <div class="highlight-item">
+              <h4>🔒 Operación Estrictamente Local</h4>
+              <p>Comunica directamente tu móvil con tu router a través de tu Wi-Fi local. No existen servidores en la nube intermediarios.</p>
+            </div>
+            <div class="highlight-item">
+              <h4>🚫 Cero Rastreo y Publicidad</h4>
+              <p>Sin Google Analytics, sin Firebase Crashlytics, sin SDKs publicitarios y sin librerías de perfilado o analítica.</p>
+            </div>
+            <div class="highlight-item">
+              <h4>🔑 Cifrado por Hardware</h4>
+              <p>Si eliges recordar la contraseña, se almacena cifrada con AES-256-GCM mediante el almacén seguro Android Keystore.</p>
+            </div>
+            <div class="highlight-item">
+              <h4>📦 Copia en la Nube Desactivada</h4>
+              <p>La copia de seguridad automática de Android está expresamente deshabilitada en el manifiesto para evitar que tus claves se sincronicen en la nube.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-card">
+          <h2>1. Datos que Tratamos y Cómo se Gestionan</h2>
+          <p>
+            La aplicación trata únicamente los datos técnicos indispensables para comunicarse con tu router y ejecutar diagnósticos de red en el propio dispositivo:
+          </p>
+
+          <h3>A. Credenciales del Router</h3>
+          <ul>
+            <li><strong>Datos tratados:</strong> Dirección IP del router (ej. <code>192.168.1.1</code>), nombre de usuario y contraseña de administración.</li>
+            <li><strong>Finalidad:</strong> Autenticarse de forma directa en el panel web local del router para consultar el estado y ejecutar las órdenes solicitadas por el usuario.</li>
+            <li><strong>Almacenamiento y Seguridad:</strong> Si marcas «Recordar contraseña», la clave se guarda exclusivamente en el almacenamiento privado de la app mediante <code>EncryptedSharedPreferences</code> con respaldo en el hardware seguro Android Keystore (cifrado AES-256-GCM y AES-256-SIV). <strong>Nunca</strong> se transmite por Internet ni se comparte con terceros.</li>
+            <li><strong>Conservación:</strong> Permanece en tu dispositivo hasta que cierres sesión, desmarques la casilla de recordar, borres los datos de la app o la desinstales.</li>
+          </ul>
+
+          <h3>B. Topología de Red y Dispositivos Conectados</h3>
+          <ul>
+            <li><strong>Datos tratados:</strong> Nombres de host, direcciones MAC, IPs locales, intensidad de señal Wi-Fi, velocidad de enlace e interfaz de conexión (cable / banda Wi-Fi).</li>
+            <li><strong>Finalidad:</strong> Mostrar el mapa de tu red doméstica, la jerarquía de nodos EasyMesh, detalles de Wi-Fi 7 / MLO y diagnósticos de cobertura.</li>
+            <li><strong>Descubrimiento Local:</strong> La app realiza consultas multicast en tu red local (mDNS en puerto UDP 5353, SSDP en puerto UDP 1900 y peticiones HTTP de descripción) exclusivamente en tu subred doméstica para identificar nombres amigables de fabricantes y modelos (impresoras, Smart TVs, domótica).</li>
+            <li><strong>Almacenamiento:</strong> Las etiquetas personalizadas por el usuario (ej. «TV Salón») se almacenan únicamente en la memoria local de la app en tu teléfono. Ningún dato se sube a internet.</li>
+          </ul>
+
+          <h3>C. Telemetría de Fibra Óptica y Hardware</h3>
+          <ul>
+            <li><strong>Datos tratados:</strong> Atenuación óptica GPON/XGS-PON (potencia Rx/Tx en dBm), voltaje del transceptor, corriente de polarización del láser y temperatura leídos directamente de los OIDs del router.</li>
+            <li><strong>Finalidad:</strong> Ofrecer diagnósticos del estado físico de la fibra óptica y ayudarte a detectar conectores sucios, curvaturas excesivas o caídas inminentes de señal.</li>
+            <li><strong>Almacenamiento:</strong> Se procesan en tiempo real en la memoria RAM del móvil; no se graban ni se envían a ningún servidor externo.</li>
+          </ul>
+
+          <h3>D. Generación de Código QR Wi-Fi</h3>
+          <ul>
+            <li><strong>Datos tratados:</strong> Nombre de red (SSID) y contraseña de tu Wi-Fi.</li>
+            <li><strong>Finalidad:</strong> Generar un código QR estándar para que tus invitados o dispositivos se conecten fácilmente a tu red.</li>
+            <li><strong>Almacenamiento y Seguridad:</strong> Se genera íntegramente de forma local mediante dibujo vectorial en el móvil y la librería de código abierto ZXing. No se utiliza ningún servicio o API remota en la nube.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h2>2. Comunicaciones con Redes Externas</h2>
+          <p>
+            La aplicación opera exclusivamente en tu red de área local (LAN), con las siguientes excepciones expresas que solo se ejecutan cuando el usuario lo solicita:
+          </p>
+          <table>
+            <thead>
+              <tr>
+                <th>Herramienta</th>
+                <th>Servicio Destino</th>
+                <th>Datos Intercambiados</th>
+                <th>Finalidad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Test de Velocidad</strong></td>
+                <td>CDN de Cloudflare (<code>speed.cloudflare.com</code>)</td>
+                <td>Flujos estándar de subida y bajada HTTP; dirección IP pública visible en el protocolo TCP.</td>
+                <td>Medir velocidad de descarga, subida, latencia y jitter. Sujeto a la <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Política de Privacidad de Cloudflare</a>.</td>
+              </tr>
+              <tr>
+                <td><strong>Diagnóstico Dual</strong></td>
+                <td>Servidor DNS Público (<code>1.1.1.1</code>)</td>
+                <td>Paquetes de latencia TCP / ping ICMP</td>
+                <td>Comparar la latencia total móvil-internet frente a la latencia router-internet para aislar si los problemas de velocidad se deben a la señal Wi-Fi de tu casa o a la red de fibra del operador.</td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            <strong>No se establece ninguna otra conexión externa.</strong> La app nunca se comunica con servidores del desarrollador, no comprueba licencias remotas ni transmite informes de error automáticos a terceros.
+          </p>
+        </div>
+
+        <div class="section-card">
+          <h2>3. Permisos de Android y Justificación Técnica</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Permiso</th>
+                <th>Identificador en AndroidManifest</th>
+                <th>Justificación Técnica Específica</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Acceso a Red</strong></td>
+                <td><code>android.permission.INTERNET</code></td>
+                <td>Permite la comunicación TCP/HTTP directa con la IP local de administración del router y la realización de pruebas de velocidad si el usuario lo solicita.</td>
+              </tr>
+              <tr>
+                <td><strong>Estado de Red</strong></td>
+                <td><code>android.permission.ACCESS_NETWORK_STATE</code></td>
+                <td>Permite comprobar si el móvil está conectado a una red Wi-Fi antes de intentar conectar con el router local.</td>
+              </tr>
+              <tr>
+                <td><strong>Wi-Fi Multicast</strong></td>
+                <td><code>android.permission.CHANGE_WIFI_MULTICAST_STATE</code></td>
+                <td>Requerido por el sistema Android para recibir paquetes multicast (mDNS y SSDP) y reconocer dispositivos de la red doméstica (Smart TVs, impresoras, asistentes).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="section-card">
+          <h2>4. Base Legal y Cumplimiento del RGPD (Usuarios en la UE / España)</h2>
+          <p>
+            Para los usuarios residentes en España y la Unión Europea, el tratamiento de datos cumple estrictamente con el <strong>Reglamento General de Protección de Datos (RGPD, Reglamento (UE) 2016/679)</strong> y la <strong>Ley Orgánica 3/2018 (LOPDGDD)</strong>:
+          </p>
+          <ul>
+            <li><strong>Base Jurídica:</strong> El tratamiento de credenciales y configuración del router se fundamenta en la <em>Ejecución de la relación solicitada por el usuario (Artículo 6.1.b del RGPD)</em> para la gestión de su equipamiento. El descubrimiento local y diagnóstico se ampara en el <em>Interés Legítimo (Artículo 6.1.f del RGPD)</em> de facilitar la identificación de equipos y optimizar la conexión.</li>
+            <li><strong>Responsable del Tratamiento:</strong> Gabriel Muñoz (Desarrollador Independiente). Contacto: <a href="mailto:gabriel@munozrodriguez.me">gabriel@munozrodriguez.me</a>.</li>
+            <li><strong>Tus Derechos:</strong> Conforme a los artículos 15 a 22 del RGPD, te asisten los derechos de acceso, rectificación, supresión y limitación. Al encontrarse todos los datos alojados exclusivamente en tu propio móvil, tienes control autónomo e inmediato: puedes eliminar cualquier dato en cualquier momento cerrando sesión o borrando el almacenamiento de la aplicación desde los Ajustes de Android.</li>
+            <li><strong>Transferencias Internacionales:</strong> El desarrollador no transfiere datos personales a terceros países ni a ninguna entidad externa.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h2>5. Librerías de Terceros Utilizadas</h2>
+          <p>
+            La aplicación incorpora únicamente librerías oficiales y de código abierto sin componentes de seguimiento:
+          </p>
+          <ul>
+            <li><strong>Android Jetpack &amp; Compose</strong> (Google LLC) — Interfaz gráfica nativa y gestión del ciclo de vida.</li>
+            <li><strong>AndroidX Security Crypto</strong> (Google LLC) — Implementa el cifrado AES-256 por hardware para las credenciales locales.</li>
+            <li><strong>OkHttp y Okio</strong> (Square, Inc.) — Cliente HTTP de alto rendimiento para interactuar localmente con el router.</li>
+            <li><strong>ZXing ("Zebra Crossing")</strong> — Librería para generación local de códigos QR. Funciona 100% desconectada.</li>
+            <li><strong>Kotlin Coroutines &amp; Serialization</strong> (JetBrains s.r.o.) — Ejecución asíncrona y procesamiento local de JSON.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <h2>6. Privacidad de Menores</h2>
+          <p>
+            Esta aplicación es una utilidad técnica orientada a administradores de redes domésticas. No recopila, solicita ni almacena conscientemente información personal de menores de 14 años (o la edad legalmente aplicable en cada jurisdicción).
+          </p>
+        </div>
+
+        <div class="section-card">
+          <h2>7. Modificaciones a esta Política de Privacidad</h2>
+          <p>
+            Podemos actualizar periódicamente esta Política de Privacidad para adaptarla a mejoras en la aplicación o a novedades legislativas. Cualquier modificación se reflejará en esta página con la fecha de entrada en vigor actualizada. El uso continuado de la app implica la aceptación de los términos vigentes.
+          </p>
+        </div>
+
+        <div class="section-card">
+          <h2>8. Contacto e Información del Desarrollador</h2>
+          <p>
+            Si tienes cualquier duda, consulta o sugerencia en materia de privacidad y protección de datos, puedes dirigirte al desarrollador:
+          </p>
+          <div class="contact-box">
+            <p><strong>Desarrollador:</strong> Gabriel Muñoz</p>
+            <p><strong>Correo Electrónico:</strong> <a href="mailto:gabriel@munozrodriguez.me">gabriel@munozrodriguez.me</a></p>
+            <p><strong>Aplicación:</strong> Router DIGI (<code>es.digirouter.app</code>)</p>
+            <p><strong>Jurisdicción:</strong> España / Unión Europea</p>
+          </div>
+        </div>
+
+      </article>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Gabriel Muñoz. All rights reserved / Todos los derechos reservados.</p>
+      <p style="margin-top: 6px; font-size: 0.8rem;">
+        DIGI Router is an independent application and is not affiliated with DIGI Spain Telecom S.L.U.
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    function switchLanguage(lang) {
+      const panelEn = document.getElementById('panelEn');
+      const panelEs = document.getElementById('panelEs');
+      const btnEn = document.getElementById('btnEn');
+      const btnEs = document.getElementById('btnEs');
+      const headerSubtitle = document.getElementById('headerSubtitle');
+
+      if (lang === 'es') {
+        panelEn.classList.remove('active');
+        panelEs.classList.add('active');
+        btnEn.classList.remove('active');
+        btnEs.classList.add('active');
+        headerSubtitle.textContent = 'Gestión y Diagnóstico de Red Local para Android';
+        document.documentElement.lang = 'es';
+        window.location.hash = 'es';
+      } else {
+        panelEs.classList.remove('active');
+        panelEn.classList.add('active');
+        btnEs.classList.remove('active');
+        btnEn.classList.add('active');
+        headerSubtitle.textContent = 'Local Network Management & Diagnostics for Android';
+        document.documentElement.lang = 'en';
+        window.location.hash = 'en';
+      }
+    }
+
+    // Initialize based on URL hash or browser preference
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.toLowerCase();
+      if (hash === '#es' || hash === '#espanol' || hash === '#spanish') {
+        switchLanguage('es');
+      } else if (hash === '#en' || hash === '#english') {
+        switchLanguage('en');
+      } else {
+        const userLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+        if (userLang.startsWith('es')) {
+          switchLanguage('es');
+        } else {
+          switchLanguage('en');
+        }
+      }
+    });
+
+    // Handle hash change dynamically
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash.toLowerCase();
+      if (hash === '#es') switchLanguage('es');
+      if (hash === '#en') switchLanguage('en');
+    });
+  </script>
+</body>
+</html>
